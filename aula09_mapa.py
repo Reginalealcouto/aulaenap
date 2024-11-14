@@ -27,4 +27,4 @@ st.header('Número de comunidades por UF')
 st.bar_chart(df['NM_UF'].value_counts())
 
 st.header('Os dez municípios com mais comunidades quilombolas')
-st.bar_chart(df['NM_MUNIC'].value_counts()[:10].sort_values(ascending=False))
+st.bar_chart(df['NM_MUNIC'].value_counts().sort_values()[:10])
