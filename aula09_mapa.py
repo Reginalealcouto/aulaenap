@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 
+st.set_page_config(layout='wide')#aumentar o tamanho da página
+
 st.title('Localização das comunidades quilombolas (2022)')
 df = pd.read_csv('https://raw.githubusercontent.com/adrianalite/datasets/main/BR_LQs_CD2022.csv')
 
@@ -27,4 +29,6 @@ st.header('Número de comunidades por UF')
 st.bar_chart(df['NM_UF'].value_counts())
 
 st.header('Os dez municípios com mais comunidades quilombolas')
-st.bar_chart(df['NM_MUNIC'].value_counts().sort_values()[:10])
+st.bar_chart(df['NM_MUNIC'].value_counts()[:10])
+
+
