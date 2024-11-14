@@ -28,9 +28,6 @@ st.write(f"A quantidade de comunidades quilombolas é {str(qtdeComunidades)}.")
 st.header('Número de comunidades por UF')
 st.bar_chart(df['NM_UF'].value_counts())
 
-st.header('Os dez municípios com mais comunidades quilombolas')
-st.bar_chart(df['NM_MUNIC'].value_counts()[:10])
-
 #tentando mostrar de mais a menos
 top_municipios = df['NM_MUNIC'].value_counts().nlargest(10)
 
