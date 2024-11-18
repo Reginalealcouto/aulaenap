@@ -16,7 +16,6 @@ dfhomens = pd.DataFrame(respostaM.json()['dados'])
 
 df = pd.concat([dfmulheres, dfhomens])
 
-st.write(df)
 opcao = st.selectbox(
     'Qual gênero vc quer selecionar?',
      ['Feminino','Masculino'])
