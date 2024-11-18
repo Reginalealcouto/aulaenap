@@ -24,8 +24,9 @@ st.write('Você selecionou: ', opcao)
 
 if opcao == 'Feminino':
   st.write(dfmulheres)
+  st.header('Número de deputadas por UF')
+  st.bar_chart(dfmulheres['siglaUf'].value_counts())
 else:
   st.write(dfhomens)
-
-st.header('Número de deputadas(os) por UF')
-st.bar_chart(df['siglaUf'].value_counts())
+  st.header('Número de deputados por UF')
+  st.bar_chart(dfhomens['siglaUf'].value_counts())
